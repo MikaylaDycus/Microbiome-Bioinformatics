@@ -1,0 +1,2 @@
+echo -e sample-id'\t'forward-absolute-filepath'\t'reverse-absolute-filepath > manifest.txt
+for i in `ls /Users/ugakpi5/Downloads/FASTQ_Summer24/*R1*gz`; do k=`dirname $i`; j=`basename $i | cut -f1,2 -d"_"`; echo -e $j '\t' $k/$j"_R1_001.fastq.gz" '\t' $k/$j"_R2_001.fastq.gz"; done >> manifest.txt
